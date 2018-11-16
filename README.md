@@ -2,29 +2,30 @@
 
 NComputerVision is a fast computer vision algorithm library written in C#.
 
-upcoming NComputerVision sample provides data file for facial express recognition:
+Upcoming NComputerVision sample provides data file for facial express recognition:
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/facial_express_recognition.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/facial_express_recognition.jpg)
 
-edge detection:
+Edge detection:
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/edge_detection.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/edge_detection.jpg)
 
 Circle detection:
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/circle_detection.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/circle_detection.jpg)
 
-sharpening:
-moon (before sharpening):
+Sharpening:
+Moon (before sharpening):
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/before_sharpening.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/before_sharpening.jpg)
 
-moon (after sharpening):
+Moon (after sharpening):
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/after_sharpening.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/after_sharpening.jpg)
 
-contour extraction:
+Contour extraction:
 
-![image](https://github.com/foamliu/NComputerVision/raw/master/images/contour_extraction.jpeg)
+![image](https://github.com/foamliu/NComputerVision/raw/master/images/contour_extraction.jpg)
+
 
 This project was created on codeplex.com in 2009, and migrated here in 2018.

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<DirectoryRef Id="TARGETDIR">
+			<Directory Id="ProgramFilesFolder" Name="PFiles">
+				<Directory Id="INSTALLDIR" Name="NComputerVision">
+					<Component Id="MyFileComponent" Guid="3F83B08D-A35C-4338-8E4F-DE5B14CC303C" DiskId="1">
+						<File Id="LicenseFile" Name="license.rtf" Source="license.rtf"/>
+                        <File Id="NComputerVision.TestApp.exe" Name="NComputerVision.TestApp.exe" Source="..\bin\NComputerVision.TestApp.exe"/>
+                        <File Id="NComputerVision.TestApp.pdb" Name="NComputerVision.TestApp.pdb" Source="..\bin\NComputerVision.TestApp.pdb"/>
+                        <File Id="NComputerVision.dll" Name="NComputerVision.dll" Source="..\bin\NComputerVision.dll"/>
+                        <File Id="NComputerVision.pdb" Name="NComputerVision.pdb" Source="..\bin\NComputerVision.pdb"/>
+					</Component>
+				</Directory>
+                 <Directory Id="ProgramMenuFolder">
+                    <Directory Id="ApplicationProgramsFolder" Name="NComputerVision"/>
+                </Directory>    
+			</Directory>
+		</DirectoryRef>
+        <DirectoryRef Id="ApplicationProgramsFolder">
+            <Component Id="MyShortcutComponent" Guid="09509DCA-A602-40c5-9DD0-5123E9ECE244">
+                <Shortcut Id="ApplicationStartMenuShortcut" 
+                    Name="NComputerVision"
+                    Description="This is a web crawler program written in C#."
+                    Target="[INSTALLDIR]NComputerVision.TestApp.exe"
+                    WorkingDirectory="INSTALLDIR"/>
+                <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>   
+                <RegistryValue Root="HKCU" Key="Software\Microsoft\NComputerVision" Name="installed" Type="integer" Value="1" KeyPath="yes"/>                
+            </Component>
+        </DirectoryRef>
+	</Fragment>
+</Wix>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*"
+		Name="NComputerVision"
+		Language="1033"
+		Version="1.0.0.0"
+		UpgradeCode="8DCB1443-A9A3-4c94-9826-BC99C91EFDAE"
+		Manufacturer="foamliu@gmail.com">
+		<Package Description="#Description"
+			Comments="Comments"
+			InstallerVersion="200"
+			Compressed="yes"/>
+		<!--
+			Source media for the installation. 
+ 			Specifies a single cab file to be embedded in the installer's .msi. 
+		-->
+		<Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high"/>
+		
+		<!-- Installation directory and files are defined in Files.wxs -->
+		<Directory Id="TARGETDIR" Name="SourceDir"/>
+		
+		<Feature Id="Complete"
+		         Title="NComputerVision"
+		         Description="NComputerVision is a fast computer vision algorithm library written in C#."
+		         Level="1"
+		         ConfigurableDirectory="INSTALLDIR">
+		         <ComponentRef Id="MyFileComponent"/>
+                 <ComponentRef Id="MyShortcutComponent"/>
+		</Feature>
+		
+		<!-- 
+			Using the Wix UI library
+ 
+			With the the WixUI_FeatureTree dialog set the user goes 
+			directly from the license agreement dialog to the feature 
+			customization dialog. This dialog set is useful
+			when your product installs all features by default. 
+		-->
+		<UIRef Id="WixUI_FeatureTree"/>
+	</Product>
+</Wix>

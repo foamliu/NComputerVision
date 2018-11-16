@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCFAE297-4806-4A6A-A989-60D77758FD54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NComputerVision</RootNamespace>
+    <AssemblyName>NComputerVision</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\log4net\log4net-1.2.11\bin\net\4.0\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SVM, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\svm\SVM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\NcvBinaryHeap.cs" />
+    <Compile Include="Common\NcvGlobals.cs" />
+    <Compile Include="Common\NcvDrawing.cs" />
+    <Compile Include="Common\Exceptions.cs" />
+    <Compile Include="Common\GrahamConvexHull.cs" />
+    <Compile Include="GraphicsLib\BoneAge.cs" />
+    <Compile Include="Interfaces\IConvexHullAlgorithm.cs" />
+    <Compile Include="Common\Image.cs" />
+    <Compile Include="Common\NcvMatrix.cs" />
+    <Compile Include="Common\SystemTools.cs" />
+    <Compile Include="Common\TemplateMatch.cs" />
+    <Compile Include="Common\Tools.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Common\NcvVector.cs" />
+    <Compile Include="Contour\GvfSnake.cs" />
+    <Compile Include="Contour\GvfSnake2.cs" />
+    <Compile Include="Contour\GvfSnakeUtility.cs" />
+    <Compile Include="Contour\HoughCircleTransformation.cs" />
+    <Compile Include="Contour\HoughLineTransformation.cs" />
+    <Compile Include="Contour\Hough_FitCircle_2.cs" />
+    <Compile Include="Contour\Hough_FitLine_2.cs" />
+    <Compile Include="Contour\Hough_FitCircle.cs" />
+    <Compile Include="Contour\Hough_FitLine.cs" />
+    <Compile Include="Contour\LevelSet.cs" />
+    <Compile Include="Contour\LevelSetContourPoint.cs" />
+    <Compile Include="Contour\RegionContourStitching.cs" />
+    <Compile Include="Contour\Snake2.cs" />
+    <Compile Include="Contour\Snakes.cs" />
+    <Compile Include="DataStructures\BaseImage.cs" />
+    <Compile Include="DataStructures\BinaryImage.cs" />
+    <Compile Include="DataStructures\BlockMatch.cs" />
+    <Compile Include="DataStructures\Circle.cs" />
+    <Compile Include="DataStructures\ComplexImage.cs" />
+    <Compile Include="DataStructures\GrayScaleImage.cs" />
+    <Compile Include="DataStructures\GrayValueFeatures.cs" />
+    <Compile Include="DataStructures\IntegralImage.cs" />
+    <Compile Include="DataStructures\IntPoint.cs" />
+    <Compile Include="DataStructures\LineSegment.cs" />
+    <Compile Include="DataStructures\NcvRgbColor.cs" />
+    <Compile Include="DataStructures\Region.cs" />
+    <Compile Include="DataStructures\RgbImage.cs" />
+    <Compile Include="DataStructures\Run.cs" />
+    <Compile Include="DataStructures\StructuringElement.cs" />
+    <Compile Include="DataStructures\SubpixelContour.cs" />
+    <Compile Include="DataStructures\SubpixelLineSegment.cs" />
+    <Compile Include="DataStructures\DoublePoint.cs" />
+    <Compile Include="DataStructures\UnmanagedImage.cs" />
+    <Compile Include="Exceptions\FeatureExtractionException.cs" />
+    <Compile Include="FeatureExtraction\FeatureExtractionType.cs" />
+    <Compile Include="FeatureExtraction\BaseFeatureExtraction.cs" />
+    <Compile Include="FeatureExtraction\RegionDescriptor.cs" />
+    <Compile Include="FeatureExtraction\ShapeDescriptor.cs" />
+    <Compile Include="GraphicsLib\BinaryImageLib.cs" />
+    <Compile Include="GraphicsLib\ColorConverter.cs" />
+    <Compile Include="GraphicsLib\ConvKernel.cs" />
+    <Compile Include="GraphicsLib\Convolution.cs" />
+    <Compile Include="GraphicsLib\FourierTransform.cs" />
+    <Compile Include="FeatureExtraction\Haar.cs" />
+    <Compile Include="GraphicsLib\ImageConvert.cs" />
+    <Compile Include="GraphicsLib\StandardTypes.cs" />
+    <Compile Include="Image\Grayscale.cs" />
+    <Compile Include="Image\GrayScaleAffineTransformation.cs" />
+    <Compile Include="Image\RgbAffineTransformation.cs" />
+    <Compile Include="Image\ConnectedComponents.cs" />
+    <Compile Include="Image\GrayScaleImageLib.cs" />
+    <Compile Include="Image\GrayScaleProcessor.cs" />
+    <Compile Include="Image\RgbProcessor.cs" />
+    <Compile Include="Image\SusanCornersDetector.cs" />
+    <Compile Include="Image\ThresholdLib.cs" />
+    <Compile Include="Interfaces\AffineTransformationBase.cs" />
+    <Compile Include="Interfaces\BaseFilter.cs" />
+    <Compile Include="Interfaces\IBlockMatching.cs" />
+    <Compile Include="Interfaces\ICornersDetector.cs" />
+    <Compile Include="Interfaces\IFilter.cs" />
+    <Compile Include="Interfaces\IFilterInformation.cs" />
+    <Compile Include="Interfaces\ITemplateMatching.cs" />
+    <Compile Include="DataStructures\Complex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
